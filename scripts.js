@@ -1,12 +1,4 @@
-// alert("How are you today?")
-
-// Target the element 
-let myButton = document.getElementById("button1")
-
-myButton.addEventListener("click",function(){
-    alert("Button has been clicked!")
-})
-
+ alert("Rember that you're mental health is important, and it's okay to ask for help when you need it. Take care of yourself and prioritize your well-being.");
 // Array of options to populate the feeling dropdown
 let feelingOptions = [
   // Option for users who feel anxious
@@ -28,6 +20,21 @@ let feelingOptions = [
 // Get the empty select element from the HTML
 let feelingSelect = document.getElementById("feeling");
 
+// Create a blank placeholder so the dropdown looks empty until opened
+let placeholderOption = document.createElement("option");
+// Empty value means no feeling has been chosen yet
+placeholderOption.value = "Select how you are feeling";
+// No visible text so the closed dropdown appears blank
+placeholderOption.textContent = "Select how you are feeling";
+// User cannot pick this option from the list
+placeholderOption.disabled = true;
+// Show this option when the page first loads
+placeholderOption.selected = true;
+// Hide this option when the user opens the dropdown
+placeholderOption.hidden = true;
+// Add the blank placeholder before the real feeling options
+feelingSelect.appendChild(placeholderOption);
+
 // Loop through each item in the feelingOptions array
 feelingOptions.forEach(function (option) {
   // Create a new <option> element for the dropdown
@@ -48,6 +55,13 @@ function findCopingStrategy() {
   let feeling = feelingInput.value.trim().toLowerCase();
   // Get the output div where the strategy message will be displayed
   let outputDiv = document.getElementById("strategyOutput");
+  // If nothing has been selected yet, ask the user to choose a feeling
+  if (feeling === "") {
+    // Show a message prompting the user to open the dropdown and pick an option
+    outputDiv.textContent = "Please select how you are feeling from the dropdown.";
+    // Stop the function so no strategy is shown yet
+    return;
+  }
   // Create a variable to store the strategy message (starts empty)
   let strategy = "";
   // Check if the user selected "anxious"
@@ -77,7 +91,7 @@ function findCopingStrategy() {
   // If the user selected "other"
   } else {
     // Set a default coping strategy for any other input
-    strategy = "Take a moment to pause, breathe deeply, and reach out to someone you trust.";
+    strategy = "Take a moment to pause, breathe deeply, and reach out to someone you trust like a parent or guardian.";
   }
   // Put the chosen strategy text inside the output div so the user can read it
   outputDiv.textContent = strategy;
