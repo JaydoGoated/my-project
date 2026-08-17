@@ -18,3 +18,8 @@ Prompt: ["I have an HTML button with id 'findStrategy' and an output div with id
 What it gave me: [It genereated for me the code]
 What I did with it: [I used it to improve my code]
 
+## Day 6
+Tool: Claude
+Prompt: [I told it to write me some code for css]
+What it gave me: [it completely changed my entire project]
+What I did with it: [I just used it to help me solve an error]

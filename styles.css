@@ -1,0 +1,143 @@
+/* ===========================
+   Roho Safi — Warm Theme
+   =========================== */
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFF3E9;
+  color: #4A2C2A;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Header banner
+   =========================== */
+header {
+  background-color: #C1440E;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+header p {
+  color: #FFE3D0;
+  margin-top: 8px;
+}
+
+/* ===========================
+   Headings (outside header)
+   =========================== */
+h2, h3 {
+  color: #C1440E;
+  text-align: center;
+}
+
+/* ===========================
+   Grid layout — arrange sections in quarters
+   =========================== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   Feature sections
+   =========================== */
+section {
+  background-color: #FFE3D0;
+  border: 1px solid #F4A261;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(193, 68, 14, 0.15);
+}
+
+/* ===========================
+   Labels
+   =========================== */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #A6320E;
+}
+
+/* ===========================
+   Dropdowns
+   =========================== */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #F4A261;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #4A2C2A;
+  font-size: 1rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #C1440E;
+  box-shadow: 0 0 0 2px rgba(193, 68, 14, 0.2);
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #E85D2C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #C1440E;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #FFF3E9;
+  color: #C1440E;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.9rem;
+}
+
+footer strong {
+  color: #FFE3D0;
+}
