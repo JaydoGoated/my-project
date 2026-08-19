@@ -23,7 +23,7 @@ let feelingSelect = document.getElementById("feeling");
 // Create a blank placeholder so the dropdown looks empty until opened
 let placeholderOption = document.createElement("option");
 // Empty value means no feeling has been chosen yet
-placeholderOption.value = "Select how you are feeling";
+placeholderOption.value = "";
 // No visible text so the closed dropdown appears blank
 placeholderOption.textContent = "Select how you are feeling";
 // User cannot pick this option from the list
@@ -58,7 +58,7 @@ function findCopingStrategy() {
   // If nothing has been selected yet, ask the user to choose a feeling
   if (feeling === "") {
     // Show a message prompting the user to open the dropdown and pick an option
-    outputDiv.textContent = "Please select how you are feeling from the dropdown.";
+    outputDiv.textContent = "Please select an option first.";
     // Stop the function so no strategy is shown yet
     return;
   }
@@ -101,3 +101,4 @@ function findCopingStrategy() {
 let findStrategyButton = document.getElementById("findStrategy");
 // When the button is clicked, run the findCopingStrategy function
 findStrategyButton.addEventListener("click", findCopingStrategy);
+

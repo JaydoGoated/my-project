@@ -31,6 +31,23 @@ header p {
   margin-top: 8px;
 }
 
+header nav {
+  margin-top: 16px;
+}
+
+header nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 12px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+header nav a:hover {
+  border-bottom: 2px solid #FFE3D0;
+}
+
 /* ===========================
    Headings (outside header)
    =========================== */
@@ -140,4 +157,54 @@ footer {
 
 footer strong {
   color: #FFE3D0;
+}
+
+/* ===========================
+   Modal popup
+   =========================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(74, 44, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-box {
+  background-color: #FFE3D0;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 85%;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #C1440E;
+  cursor: pointer;
+  width: auto;
+  padding: 0;
+}
+
+#modalText {
+  color: #4A2C2A;
+  font-size: 1.05rem;
+  margin-top: 10px;
 }
